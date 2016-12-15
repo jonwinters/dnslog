@@ -40,6 +40,7 @@ PATH: /usr/games
 PATH: /usr/local/games
 PATH: /snap/bin
 PATH: /usr/local/go/bin
+PATH: /opt/node-v4.4.7-linux-x64/bin
 
 
 ## ----------- ##
