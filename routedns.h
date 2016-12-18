@@ -1,5 +1,4 @@
 #include <boost/asio.hpp>
-#include <boost/date_time.hpp>
 #include <boost/lambda/bind.hpp>
 #include <boost/lambda/lambda.hpp>
 #include <boost/lexical_cast.hpp>
@@ -8,12 +7,14 @@
 #include <string>
 #include <vector>
 
-#define DEBUG_MODE 0
+#define LOG_MSG 1
+extern uint32_t Parse_Rcvbuf(uint8_t *buffer);
+extern void NowTimePrint();
 
 #define print_info(fmt, ...)                                                   \
   do {                                                                         \
-    if (DEBUG_MODE) {                                                                   \
-      Nowtime();                                                               \
+    if (LOG_MSG) {                                                                   \
+      NowTimePrint();                                                               \
       printf(fmt "\n", ##__VA_ARGS__);                                         \
     }                                                                          \
   } while (0)
@@ -26,6 +27,9 @@
     __w++;                                                                     \
   } while (0)
 
-extern uint32_t Parse_Rcvbuf(uint8_t *buffer);
+
+
+
+
 
 #define MAX_THREAD_COUNT 30

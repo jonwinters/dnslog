@@ -1,8 +1,6 @@
 #include "routedns.h"
 
-using namespace std;
-
-void Nowtime()
+void NowTimePrint()
 {
 	struct timeval tv;
 	gettimeofday(&tv,NULL);
@@ -60,8 +58,7 @@ uint32_t Parse_Rcvbuf(uint8_t *buffer)
 		uint8_t Domain[256] = {0};
 		buffer += parseNAME(buffer,Domain);
 		print_info("Domain = %s ",Domain);
-		string domain((const char*)Domain);
-		string ip;
+		
 		while(*buffer == 0xc0)
 		{
 			buffer += 2; 				//->type;
@@ -79,19 +76,10 @@ uint32_t Parse_Rcvbuf(uint8_t *buffer)
 				buffer += 1;
 				netip = (struct in_addr *)buffer;
 				buffer += 4;
-				char _data[255];
 				char *net_ip = inet_ntoa(*netip);
 				print_info("ip = %s",net_ip);
-				sprintf(_data,"%s;",net_ip);
-				ip.append(_data);
-				//printf("ip = %s",inet_ntop(*netip));
 			}
 		}
-		string sql;
-		sql.append(domain);
-		sql.append(" ");
-		sql.append(ip);
-		cout << sql << endl;
 
 	ret = 1;
 	return ret;
