@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jonwinters/code/dnslog/parsedns.cpp
+routedns.h
+/home/jonwinters/code/dnslog/routedns.h
+
+/home/jonwinters/code/dnslog/routedns.cpp
+routedns.h
+/home/jonwinters/code/dnslog/routedns.h
+
+/home/jonwinters/code/dnslog/routedns.h
+boost/asio.hpp
+-
+boost/lambda/bind.hpp
+-
+boost/lambda/lambda.hpp
+-
+boost/lexical_cast.hpp
+-
+boost/thread.hpp
+-
+iostream
+-
+string
+-
+vector
+-
+

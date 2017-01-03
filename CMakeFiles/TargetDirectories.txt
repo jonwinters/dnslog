@@ -1,0 +1,3 @@
+/home/jonwinters/code/dnslog/CMakeFiles/edit_cache.dir
+/home/jonwinters/code/dnslog/CMakeFiles/rebuild_cache.dir
+/home/jonwinters/code/dnslog/CMakeFiles/routedns.dir
