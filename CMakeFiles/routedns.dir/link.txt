@@ -1,1 +1,0 @@
-/usr/bin/clang++   -Wall -O4 -DNDEBUG   CMakeFiles/routedns.dir/routedns.cpp.o CMakeFiles/routedns.dir/parsedns.cpp.o  -o routedns -rdynamic -lboost_system -lboost_thread 
