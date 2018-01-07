@@ -1,7 +1,1 @@
-##RouteDNS
-
-Routedns is very simple and fast dns request record tool for unix like system
-
-you can compile it on macos linux unix system
-
-it base on boost_thread pool library 
+DNS解析转发记录工具，可以分析客户端的dns请求
